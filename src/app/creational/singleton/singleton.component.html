@@ -1,7 +1,27 @@
 <div class="card">
-  <h3 class="card-heading">Singleton</h3>
+  <h3 class="card--heading">Singleton</h3>
+  <p class="card--body">
+    A singleton restricts the instantiation of a class to one instance.
+  </p>
+  <p class="card--body">
+    Singletons allow the members of a class to be shared across an application allowing other classes or modules to share data or common behaviour.
+  </p>
+  <img class="diagram" src="assets/diagrams/singleton.svg" alt="Diagram">
+  <div class="console">
+    <h4 class="console--heading">Singleton.console</h4>
+    <div class="console--text">
+      <p *ngFor="let instance of instanceList; index as i;">&gt; Created instance: {{i}}</p>
+      <p *ngFor="let checked of checkedInstances;">&gt; {{checked}}</p>
+    </div>
+  </div>
   <div class="buttons">
     <div id="new-singleton" class="btn" (click)="newSingletonInstance()">New Instance</div>
     <div id="check-singletons" class="btn" (click)="checkSingletonInstances()">Check Instances</div>
+  </div>
+  <div class="code">
+    <h4 class="code--heading">Singleton.ts</h4>
+    <pre class="code--block">
+      <code [innerHTML]="code"></code>
+    </pre>
   </div>
 </div>

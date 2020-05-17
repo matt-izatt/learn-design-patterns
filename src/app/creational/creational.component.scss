@@ -19,3 +19,12 @@
     height: fit-content;
   }
 }
+
+@media screen and (min-width: 500px) {
+
+  .container {
+    .sub-content {
+      width: 90%;
+    }
+  }
+}

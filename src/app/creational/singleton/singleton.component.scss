@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
@@ -9,31 +10,75 @@
   width: 100%;
   height: fit-content;
 
-  .card-heading {
-    padding: 1rem;
+  margin-bottom: 2rem;
+
+  &--heading {
+    padding: 2rem;
     text-align: center;
     width: 100%;
   }
 
+  &--body {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .diagram {
+    width: 100%;
+    max-width: 54rem;
+    padding: 0 6rem;
+    margin: 1rem 0 6rem;
+  }
+
+  .console {
+    width: 80%;
+    height: fit-content;
+
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+    background-color: black;
+
+    &--heading {
+      padding: 0.4rem 0 0.4rem 2rem;
+      color: white;
+      background-color: dodgerblue;
+    }
+
+    &--text {
+      height: 20rem;
+      padding: 1.2rem 2rem;
+
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.4rem;
+      line-height: 3rem;
+      color: greenyellow;
+
+      overflow-y: scroll;
+    }
+  }
+
   .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
-    margin: 2rem;
+    margin-bottom: 6rem;
+    width: 30rem;
 
     .btn {
-      padding: 12px 20px;
+      padding: 1.2rem 2rem;
 
-      height: 40px;
+      height: 4rem;
 
       border: none;
-      border-radius: 20px;
-      background-color: #7069FA;
+      border-radius: 0.6rem;
+      background-color: dodgerblue;
 
       color: white;
       font-weight: 800;
-      font-size: 12px;
+      font-size: 1.2rem;
       text-align: center;
 
       cursor: pointer;
@@ -42,6 +87,48 @@
       &:hover {
         box-shadow: none;
       }
+    }
+  }
+
+  .code {
+    width: 80%;
+
+    margin-bottom: 4rem;
+    border-radius: 0.6rem;
+
+    overflow: hidden;
+    background-color: #eae5e5;
+
+    &--heading {
+      padding: 0.4rem 0 0.4rem 2rem;
+      color: white;
+      background-color: dodgerblue;
+    }
+
+    &--block {
+      overflow-x: scroll;
+      padding: 0 3rem 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .card {
+    &--body {
+      width: 90%;
+    }
+
+    .diagram {
+      padding: 0 2rem;
+    }
+
+    .console {
+      width: 90%;
+    }
+
+    .code {
+      width: 90%;
     }
   }
 }
