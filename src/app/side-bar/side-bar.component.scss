@@ -1,0 +1,23 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: #0B69A3;
+
+  .nav-item {
+    display: block;
+
+    width: 100%;
+    padding: 16px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

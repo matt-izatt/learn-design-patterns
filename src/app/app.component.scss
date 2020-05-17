@@ -1,0 +1,19 @@
+$top-bar-height: 6rem;
+
+.top {
+  height: $top-bar-height;
+  width: 100vw;
+}
+.main-container {
+  display: flex;
+
+  .sidebar {
+    width: 30rem;
+    height: calc(100vh - #{$top-bar-height});
+  }
+
+  .content {
+    width: calc(100vw - 30rem);
+    height: calc(100vh - #{$top-bar-height});
+  }
+}

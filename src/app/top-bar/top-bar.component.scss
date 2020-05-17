@@ -1,0 +1,132 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 60px;
+
+  background-color: #283E4A;
+
+  .left {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    .logo {
+      padding-left: 15px;
+      height: 28px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    .nav-item {
+      display: inline-block;
+
+      padding: 16px;
+
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      font-weight: 400;
+
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    .search-bar {
+      $bar-height: 34px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      width: $bar-height;
+      height: $bar-height;
+
+      border-radius: calc(#{$bar-height} / 2);
+
+      margin-right: 10px;
+
+      transition: background-color 450ms ease, width 450ms ease;
+
+      .search-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 2;
+
+        width: 100%;
+        height: $bar-height;
+        padding-left: 20px;
+
+        background-color: transparent;
+        opacity: 0;
+
+        cursor: pointer;
+
+        color: #5A5858;
+        font-size: 14px;
+        border: none;
+        border-radius: calc(#{$bar-height} / 2);
+      }
+
+      .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        width: calc(#{$bar-height} - 8px);
+        height: calc(#{$bar-height} - 8px);
+
+        margin: 5px;
+
+        cursor: pointer;
+
+        fill: rgba(255, 255, 255, 0.8);
+
+        transition: fill 450ms ease;
+
+        &:hover {
+          .search-icon {
+            fill: #006EB8;
+          }
+        }
+      }
+
+      &:focus-within {
+
+        width: 30vw;
+        background-color: white;
+
+        .search-box {
+          z-index: 1;
+          opacity: 1;
+          cursor: text;
+        }
+
+        .icon {
+          fill: black;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
