@@ -4,16 +4,34 @@ $top-bar-height: 6rem;
   height: $top-bar-height;
   width: 100vw;
 }
+
 .main-container {
   display: flex;
+  position: relative;
 
   .sidebar {
-    width: 30rem;
+    width: 26rem;
     height: calc(100vh - #{$top-bar-height});
   }
 
   .content {
-    width: calc(100vw - 30rem);
+    flex-grow: 1;
     height: calc(100vh - #{$top-bar-height});
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .main-container {
+    .sidebar {
+      position: absolute;
+      display: none;
+      width: 0;
+    }
+
+    .open {
+      display: unset;
+      width: 26rem;
+    }
   }
 }

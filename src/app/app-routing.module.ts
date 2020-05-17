@@ -3,6 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {CreationalComponent} from "./creational/creational.component";
 import {SingletonComponent} from "./creational/singleton/singleton.component";
+import {StructuralComponent} from "./structural/structural.component";
+import {BehaviouralComponent} from "./behavioural/behavioural.component";
 
 const routes: Routes = [
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
         component: SingletonComponent
       }
     ]
+  },
+  {
+    path: 'structural',
+    component: StructuralComponent,
+  },
+  {
+    path: 'behavioural',
+    component: BehaviouralComponent,
   }
 
 ];

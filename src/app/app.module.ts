@@ -8,6 +8,8 @@ import {SideBarComponent} from "./side-bar/side-bar.component";
 import {TopBarComponent} from "./top-bar/top-bar.component";
 import {CreationalComponent} from './creational/creational.component';
 import {SingletonComponent} from './creational/singleton/singleton.component';
+import {StructuralComponent} from './structural/structural.component';
+import {BehaviouralComponent} from './behavioural/behavioural.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {SingletonComponent} from './creational/singleton/singleton.component';
     SideBarComponent,
     HomeComponent,
     CreationalComponent,
-    SingletonComponent
+    SingletonComponent,
+    StructuralComponent,
+    BehaviouralComponent
   ],
   imports: [
     BrowserModule,
