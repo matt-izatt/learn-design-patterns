@@ -10,6 +10,7 @@ import {CreationalComponent} from './creational/creational.component';
 import {SingletonComponent} from './creational/singleton/singleton.component';
 import {StructuralComponent} from './structural/structural.component';
 import {BehaviouralComponent} from './behavioural/behavioural.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {BehaviouralComponent} from './behavioural/behavioural.component';
     CreationalComponent,
     SingletonComponent,
     StructuralComponent,
-    BehaviouralComponent
+    BehaviouralComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

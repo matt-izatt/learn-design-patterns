@@ -1,4 +1,4 @@
-$top-bar-height: 6rem;
+$top-bar-height: 6.4rem;
 
 .top {
   height: $top-bar-height;
@@ -12,6 +12,8 @@ $top-bar-height: 6rem;
   .sidebar {
     min-width: 26rem;
     height: calc(100vh - #{$top-bar-height});
+    overflow-y: scroll;
+    box-shadow: 6px 0 6px rgba(0,0,0,.1);
   }
 
   .content {

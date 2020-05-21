@@ -5,6 +5,7 @@ import {CreationalComponent} from "./creational/creational.component";
 import {SingletonComponent} from "./creational/singleton/singleton.component";
 import {StructuralComponent} from "./structural/structural.component";
 import {BehaviouralComponent} from "./behavioural/behavioural.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
 
 const routes: Routes = [
   {
@@ -28,16 +29,32 @@ const routes: Routes = [
       {
         path: 'singleton',
         component: SingletonComponent
+      },
+      {
+        path: '**',
+        component: NotFoundComponent
       }
     ]
   },
   {
     path: 'structural',
     component: StructuralComponent,
+    children: [
+      {
+        path: '**',
+        component: NotFoundComponent
+      }
+    ]
   },
   {
-    path: 'behavioural',
+    path: 'behavioral',
     component: BehaviouralComponent,
+    children: [
+      {
+        path: '**',
+        component: NotFoundComponent
+      }
+    ]
   }
 
 ];

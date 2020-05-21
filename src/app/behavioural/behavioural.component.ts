@@ -1,15 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-behavioural',
-  templateUrl: './behavioural.component.html',
-  styleUrls: ['./behavioural.component.scss']
+  template: '<router-outlet></router-outlet>',
+  styles: ['']
 })
-export class BehaviouralComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class BehaviouralComponent {
 }

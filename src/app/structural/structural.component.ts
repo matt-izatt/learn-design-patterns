@@ -1,15 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-structural',
-  templateUrl: './structural.component.html',
-  styleUrls: ['./structural.component.scss']
+  template: '<router-outlet></router-outlet>',
+  styles: ['']
 })
-export class StructuralComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class StructuralComponent {
 }
