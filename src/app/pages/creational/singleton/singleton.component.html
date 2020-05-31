@@ -1,0 +1,41 @@
+<div class="content">
+  <section class="section">
+    <h2 class="section--heading">Singleton</h2>
+    <p class="section--body">
+      A singleton restricts the instantiation of a class to one instance.
+    </p>
+    <p class="section--body">
+      Singletons allow the members of a class to be shared across an application allowing other classes or modules to share data or common behaviour.
+    </p>
+  </section>
+  <section class="section center-vertical">
+    <h3 class="section--heading">Class Diagram</h3>
+    <figure class="section--figure center-vertical">
+      <img src="../../../../assets/diagrams/singleton.svg" alt="Diagram">
+      <figcaption>Singleton Class Diagram</figcaption>
+    </figure>
+  </section>
+  <section class="section">
+    <h3 class="section--heading">Typescript Implementation</h3>
+    <div class="code">
+      <h4 class="code--heading">Singleton.ts</h4>
+      <pre class="code--body">
+      <code [innerHTML]="code"></code>
+    </pre>
+    </div>
+  </section>
+  <section class="section">
+    <h3 class="section--heading">Demo</h3>
+    <div class="console">
+      <h4 class="console--heading">Singleton.console</h4>
+      <div class="console--text">
+        <p *ngFor="let instance of instanceList; index as i;">&gt; Created instance: {{i}}</p>
+        <p *ngFor="let checked of checkedInstances;">&gt; {{checked}}</p>
+      </div>
+      <div class="console--controls">
+        <div id="new-singleton" class="btn" (click)="newSingletonInstance()">New Instance</div>
+        <div id="check-singletons" class="btn" (click)="checkSingletonInstances()">Check Instances</div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,19 +1,31 @@
 $top-bar-height: 6.4rem;
 
 .top {
+  position: absolute;
+  top: 0;
   height: $top-bar-height;
   width: 100vw;
+  z-index: 1;
 }
 
 .main-container {
   display: flex;
   position: relative;
+  margin-top: $top-bar-height;
 
   .sidebar {
+    display: block;
     min-width: 26rem;
+    width: 26rem;
     height: calc(100vh - #{$top-bar-height});
     overflow-y: scroll;
     box-shadow: 6px 0 6px rgba(0,0,0,.1);
+    transition: all 500ms ease;
+  }
+
+  .open {
+    min-width: 0;
+    width: 0;
   }
 
   .content {

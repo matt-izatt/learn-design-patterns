@@ -6,19 +6,7 @@
   width: 100%;
   height: fit-content;
 
-  .block {
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-    padding: 0 4rem 2rem 4rem;
-
-    .diagram {
-      width: 100%;
-      max-width: 54rem;
-      padding: 0 6rem;
-      margin: 1rem 0 6rem;
-    }
+  z-index: -6;
 
     .code {
       width: 100%;
@@ -26,6 +14,7 @@
 
       overflow: hidden;
       background-color: #eae5e5;
+      z-index: -1;
 
       &--heading {
         padding: 0.4rem 0 0.4rem 2rem;
@@ -65,37 +54,13 @@
 
         overflow-y: scroll;
       }
-    }
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      margin-bottom: 6rem;
-      width: 30rem;
-
-      .btn {
-        padding: 1.2rem 2rem;
-
-        height: 4rem;
-
-        border: none;
-        border-radius: 0.6rem;
-        background-color: dodgerblue;
-
-        color: white;
-        font-weight: 800;
-        font-size: 1.2rem;
-        text-align: center;
-
-        cursor: pointer;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-        &:hover {
-          box-shadow: none;
-        }
+      &--controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
       }
     }
-  }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Singleton} from "./singleton";
 
 @Component({
@@ -6,7 +6,7 @@ import {Singleton} from "./singleton";
   templateUrl: './singleton.component.html',
   styleUrls: ['./singleton.component.scss']
 })
-export class SingletonComponent implements OnInit {
+export class SingletonComponent {
 
   instanceList: Singleton[] = [];
   checkedInstances: string[] = [];
@@ -34,25 +34,16 @@ export class SingletonComponent implements OnInit {
   }
   `
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   newSingletonInstance() {
-    const instanceNumber = this.instanceList.length;
     this.instanceList.push(Singleton.getInstance())
-    console.log(`Created instance ${instanceNumber}`);
   }
 
   checkSingletonInstances() {
+    this.checkedInstances = [];
     let i: number;
     for (i = 0; i < this.instanceList.length; i++) {
       this.checkedInstances.push(`Instance ${i} id: ${this.instanceList[i].getId()}`)
-      console.log(`Instance ${i} id: ${this.instanceList[i].getId()}`)
     }
-    console.log(this.checkedInstances);
   }
 
 }
