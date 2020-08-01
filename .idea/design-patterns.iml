@@ -6,6 +6,32 @@
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludePattern pattern="*.spec.json" />
+      <excludePattern pattern="*app.json" />
+      <excludePattern pattern=".editorconfig" />
+      <excludePattern pattern=".gitignore" />
+      <excludePattern pattern="*.key" />
+      <excludePattern pattern="*.crt" />
+      <excludePattern pattern="package-lock.json" />
+      <excludePattern pattern="test-results.xml" />
+      <excludePattern pattern="LICENSE.txt" />
+      <excludePattern pattern="browserslist" />
+      <excludePattern pattern="README.md" />
+      <excludePattern pattern="karma.conf.js" />
+      <excludePattern pattern="tsconfig.json" />
+      <excludePattern pattern="tslint.json" />
+      <excludePattern pattern="test.ts" />
+      <excludePattern pattern="polyfills.ts" />
+      <excludePattern pattern="favicon.ico" />
+      <excludePattern pattern=".eslintrc.js" />
+      <excludePattern pattern=".prettierrc" />
+      <excludePattern pattern="tsconfig.build.json" />
+      <excludePattern pattern="tsconfig.base.json" />
+      <excludePattern pattern="storage.rules" />
+      <excludePattern pattern=".browserslistrc" />
+      <excludePattern pattern=".firebaserc" />
+      <excludePattern pattern="firestore.indexes.json" />
+      <excludePattern pattern="firestore.rules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
